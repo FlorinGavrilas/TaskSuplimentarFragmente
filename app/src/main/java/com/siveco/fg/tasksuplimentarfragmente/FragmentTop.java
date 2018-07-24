@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,14 +29,17 @@ public class FragmentTop extends Fragment {
         btnSubmit = (Button) view.findViewById(R.id.btnSubmit);
 
 
-
-        name = etName.getText().toString().trim();
-        surname = etSurname.getText().toString().trim();
-
-        btnSubmit.setOnClickListener(v -> mainActivity.setInfo(name, surname));
+        btnSubmit.setOnClickListener(v ->
+        {
+            name = etName.getText().toString().trim();
+            surname = etSurname.getText().toString().trim();
+            mainActivity.setInfo(name, surname);
+            
+        });
 
         return view;
     }
+
 
     @Override
     public void onAttach(Context context) {
@@ -43,4 +47,6 @@ public class FragmentTop extends Fragment {
 
         mainActivity = (ContractInterface) context;
     }
+
+
 }
