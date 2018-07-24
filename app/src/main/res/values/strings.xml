@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TaskSuplimentarFragmente</string>
+    <string name="etName">Nume</string>
+    <string name="etSurname">Prenume</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="tvName">Nume:</string>
+    <string name="tvSurname">Prenume:</string>
+</resources>
